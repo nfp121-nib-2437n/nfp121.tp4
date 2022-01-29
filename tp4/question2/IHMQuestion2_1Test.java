@@ -63,7 +63,9 @@ public class IHMQuestion2_1Test extends junit.framework.TestCase
         Point location = subComponents[0].getLocationOnScreen();
         mouseMoveAndClick(location.x+(subComponents[0].getWidth()/2),location.y+(subComponents[0].getHeight()/2));
         TextArea sortie = (TextArea)components[1];
-        StringTokenizer st = new StringTokenizer(sortie.getText(),"\n");
+        System.out.println(sortie);
+        StringTokenizer st = new StringTokenizer(sortie.getText());
+        
         assertTrue("  3 lignes sont attendues !!!", st.countTokens()==3);
 
     }
